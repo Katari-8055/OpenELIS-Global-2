@@ -28,6 +28,8 @@ describe("PostSavePrintDialog", () => {
     expect(screen.getByText(/LAB-001/)).toBeInTheDocument();
     expect(screen.getByText("order")).toBeInTheDocument();
     expect(screen.getByText("specimen")).toBeInTheDocument();
+    expect(screen.getByText("Qty: 2")).toBeInTheDocument();
+    expect(screen.getByText("Qty: 1")).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: "Print" })).toHaveLength(2);
     expect(screen.getByRole("button", { name: "Done" })).toBeInTheDocument();
   });
